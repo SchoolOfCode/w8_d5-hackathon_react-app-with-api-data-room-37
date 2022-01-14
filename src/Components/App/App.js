@@ -18,14 +18,16 @@ useEffect(() => {
       return
     }
 
-    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=metric&appid=160cec49564aa8277fc523ac242c7bb0`
+    const res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${userInput}&units=metric&cnt=1&appid=160cec49564aa8277fc523ac242c7bb0`
     );
+
+
     const data = await res.json();
     console.log(data)
     
     setweatherData({
-      name: data.name,
-      temp: `${Math.round(Number(data.main.temp))}°C`,
+      name: data.city.name,
+      temp: `${Math.round(Number(data.list[0].main.temp))}°C`,
     })
   }
   getWeather()
