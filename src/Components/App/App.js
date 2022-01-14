@@ -32,7 +32,6 @@ function App() {
         temp4: `${Math.round(Number(data.list[3].main.temp))}°C`,
         temp5: `${Math.round(Number(data.list[4].main.temp))}°C`,
       });
-      console.log(weatherData)
     }
     getWeather();
   }, [userInput]);
