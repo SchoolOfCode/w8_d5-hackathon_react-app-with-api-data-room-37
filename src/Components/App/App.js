@@ -9,7 +9,7 @@ import FiveDayWeather from "../FiveDayWeather";
 function App() {
   const [userInput, setuserInput] = useState("");
   const [weatherData, setweatherData] = useState([]);
- 
+
   useEffect(() => {
     async function getWeather() {
       // check that user entered input
@@ -45,18 +45,35 @@ function App() {
       <h1>Weather Finder</h1>
       <Input handleSubmit={handleSubmit} />
       <nav>
-      <button> <Link to="/">Today</Link></button>
-      <button> <Link to="/3day">3 Day Weather</Link></button>
-      <button> <Link to="/5day">5 Day Weather</Link></button>
+        <button>
+          {" "}
+          <Link to="/">Today</Link>
+        </button>
+        <button>
+          {" "}
+          <Link to="/3day">3 Day Weather</Link>
+        </button>
+        <button>
+          {" "}
+          <Link to="/5day">5 Day Weather</Link>
+        </button>
       </nav>
       <Routes>
-        <Route path="/" element={<CurrentWeather weatherdata={weatherData}/>}/>
-        <Route path="/3day" element={<ThreeDayWeather weatherdata={weatherData}/>}/>
-        <Route path="/5day" element={<FiveDayWeather weatherdata={weatherData}/>}/>
+        <Route
+          path="/"
+          element={<CurrentWeather weatherdata={weatherData} />}
+        />
+        <Route
+          path="/3day"
+          element={<ThreeDayWeather weatherdata={weatherData} />}
+        />
+        <Route
+          path="/5day"
+          element={<FiveDayWeather weatherdata={weatherData} />}
+        />
       </Routes>
     </div>
   );
 }
 
 export default App;
-
