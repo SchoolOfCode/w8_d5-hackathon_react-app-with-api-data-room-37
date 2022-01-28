@@ -8,9 +8,10 @@ const ThreeDay = () => {
     "Friday",
     "Saturday",
   ];
-  var tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 2);
-  let day = weekday[tomorrow.getDay()];
+  var today = new Date();
+  today.setDate(today.getDate() + 2);
+  let day = weekday[today.getDay()];
+  return day;
 };
 
 export default ThreeDay;
