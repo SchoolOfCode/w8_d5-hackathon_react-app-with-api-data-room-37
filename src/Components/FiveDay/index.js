@@ -8,9 +8,9 @@ const FiveDay = () => {
     "Friday",
     "Saturday",
   ];
-  const d = new Date();
-  let day = weekday[d.getDay() + 5];
-  return day;
+  var tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 4);
+  let day = weekday[tomorrow.getDay()];
 };
 
 export default FiveDay;
