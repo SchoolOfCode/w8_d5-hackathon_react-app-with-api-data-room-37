@@ -8,9 +8,9 @@ const TwoDay = () => {
     "Friday",
     "Saturday",
   ];
-  const d = new Date();
-  let day = weekday[d.getDay() + 2];
-  return day;
+  var tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  let day = weekday[tomorrow.getDay()];
 };
 
 export default TwoDay;

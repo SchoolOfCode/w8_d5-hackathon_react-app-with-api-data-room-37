@@ -9,7 +9,7 @@ const CurrentDay = () => {
     "Saturday",
   ];
   const d = new Date();
-  let day = weekday[d.getDay()];
+  let day = weekday[d.getDay() + 1];
   return day;
 };
 
