@@ -1,27 +1,61 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6701953&assignment_repo_type=AssignmentRepo)
-# React-athon
+# Weather App
 
-For today's hackathon, we will be creating a web experience using data from an api.
+## Contents
 
-## Task 1 - API Research (20 - 30 mins)
+1. Getting started
+2. Sections
+   1. Components
+3. Link to deployed site
+4. Current Issues
 
-Choose an API(s) for a full stack React app, this [list](https://apilist.fun) may help however feel free to pick any API you like. You can always fall back on pokemon/Star Wars if needs be.
+### Getting Started
 
-## Task 2 - Ideate and Plan (30 - 60 mins)
+To open the weather app code base, clone down the code base from github, as shown below.
+_NB: Code is public_
 
-Use Disney ideation to come up with an idea of what you want to build. Then decide what your MVP is, and make it so that you can achieve your MVP before lunch. Break down your idea into its component parts, and prioritise your tasks.
+Link to github: https://github.com/SchoolOfCode/w8_d5-hackathon_react-app-with-api-data-room-37
 
-## Task 3 - Build your MVP (60 - 180 mins)
+![](Screenshot1.png)
 
-Have the most simple version of your app (just enough features to be useable) working before lunch. Make regular commits as you build each component. Consider using React Router, useReducer, useEffect, etc.. if appropriate.
+_Remember to install npm i dependencies_
 
-## Task 4 - Deployment
-Deploy your MVP on Netlify as soon as possible. Each time you push a new version of your app to Github, Netlify should automatically rebuild and deploy it. If your app uses environment variables, be sure to configure these on Netlify.
+![](Screenshot3.png)
 
-## Task 5 - Stretch Goals
+### Sections
 
-Focus on what features you are going to build next. Break it down into tasks/tickets that you can work on. Make use of feature branching and atomic commits.
+The below shows the structure of the weather app components and their associated functions.
 
-## Show & Tell @ 16:00
+#### Components
 
-You'll be presenting your apps to each other, and each team member should be prepared to present about their app so an end of day wrap-up is a good idea.
+Weather app
+
+1. Src
+
+2. Standard React JS files where components are called to the DOM, see screeshot below (_do not need to alter_)
+
+![](Screenshot2.png)
+
+3. Components
+
+   1. App Where useState for weather data and useEffect which contains the fetch for the API that contains the weather JSON is called. _(Also where all components are called and will placed in render section so they appear in the html in the browser)_
+   2. Current Day (Component showing the current day of the week)
+   3. Current Weather (Component showing the current temp)
+   4. Five Day (Component showing the day of the week in 5 days time)
+   5. FiveDayWeather (Component showing the temp for today and the next four days)
+   6. FourDay (Component showing the day of the week in four days time)
+   7. Input (Component rendering user input text field and button)
+   8. ThreeDay (Component showing the day of the week in three days time)
+   9. ThreeDayWeather (Component showing the temp for the current day and the next two days)
+   10. TwoDay (Component showing the day of the week in two days time)
+
+4. Public (contains standard React public files and the main index html where the react components will be rendered to)
+
+### Deployed Site
+
+Link to deployed site (deployed via netlify):
+
+https://whydoesitalwaysrainonme.netlify.app/
+
+### Current Issues
+
+N/A
